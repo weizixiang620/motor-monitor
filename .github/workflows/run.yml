@@ -1,12 +1,12 @@
 name: Motor Monitor
 
 on:
-  workflow_dispatch:        # 讓你可以手動按按鈕執行測試
+  workflow_dispatch:
   schedule:
-    - cron: '*/30 * * * *'  # 每 30 分鐘自動跑一次
+    - cron: '*/30 * * * *'
 
 jobs:
-  build:
+  check-motor:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
